@@ -4,7 +4,7 @@
 \alias{scatterplot}
 \title{Scatterplot using ggplot2}
 \usage{
-scatterplot(data, xvar, yvar)
+scatterplot(data, xvar, yvar, colvar = NULL)
 }
 \arguments{
 \item{data}{A data frame containing the data to be plotted. Example: iris.}
@@ -12,6 +12,9 @@ scatterplot(data, xvar, yvar)
 \item{xvar}{A character string specifying the column name for the x-axis. Example: "Sepal.Length".}
 
 \item{yvar}{A character string specifying the column name for the y-axis. Example: "Sepal.Width".}
+
+\item{colvar}{A character string specifying the column name for the color of the points.
+If NULL, all points will have the same color. Example: "Species".}
 }
 \value{
 A ggplot2 scatterplot.
@@ -20,6 +23,6 @@ A ggplot2 scatterplot.
 This function creates a scatterplot using ggplot2 based on the provided data and variable names.
 }
 \examples{
-scatterplot(data = iris, xvar = "Sepal.Length", yvar = "Sepal.Width")
+scatterplot(data = iris, xvar = "Sepal.Length", yvar = "Sepal.Width", colvar = "Species")
 
 }
